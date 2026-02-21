@@ -1,0 +1,1 @@
+/usr/bin/g++ -Wl,--dependency-file=CMakeFiles/mash.dir/link.d CMakeFiles/mash.dir/main.cpp.o -o mash  Shell/libshell.a

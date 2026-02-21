@@ -1,0 +1,3 @@
+project(shell LANGUAGES CXX)   
+add_library(shell shell.cpp)
+target_include_directories(shell PUBLIC ${CMAKE_CURRENT_SOURCE_DIR})

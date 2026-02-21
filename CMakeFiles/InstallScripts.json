@@ -1,0 +1,8 @@
+{
+	"InstallScripts" : 
+	[
+		"/mnt/c/users/dell/mash/cmake_install.cmake",
+		"/mnt/c/users/dell/mash/Shell/cmake_install.cmake"
+	],
+	"Parallel" : false
+}
