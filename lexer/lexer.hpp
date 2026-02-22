@@ -5,19 +5,19 @@
 class lexer
 {
 private:
+    std::string type_handler(std::string token_);
     
-
 public:
-    int tokenizer(std::string cmd);
-    int lex(std::string command);
-    
     struct token
     {
         std::string type;
         std::string text;
         
         
-    };
+    };  
+    
+    std::vector<lexer::token> tokenizer(std::string cmd);
+    int lex(std::string command);
     
 };
 
