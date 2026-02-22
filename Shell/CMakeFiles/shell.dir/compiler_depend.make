@@ -17,15 +17,20 @@ Shell/CMakeFiles/shell.dir/shell.cpp.o: Shell/shell.cpp \
   /usr/include/asm/types.h \
   /usr/include/bits/atomic_wide_counter.h \
   /usr/include/bits/byteswap.h \
+  /usr/include/bits/confname.h \
   /usr/include/bits/cpu-set.h \
   /usr/include/bits/endian.h \
   /usr/include/bits/endianness.h \
+  /usr/include/bits/environments.h \
   /usr/include/bits/errno.h \
   /usr/include/bits/floatn-common.h \
   /usr/include/bits/floatn.h \
+  /usr/include/bits/getopt_core.h \
+  /usr/include/bits/getopt_posix.h \
   /usr/include/bits/libc-header-start.h \
   /usr/include/bits/locale.h \
   /usr/include/bits/long-double.h \
+  /usr/include/bits/posix_opt.h \
   /usr/include/bits/pthread_stack_min-dynamic.h \
   /usr/include/bits/pthreadtypes-arch.h \
   /usr/include/bits/pthreadtypes.h \
@@ -69,6 +74,7 @@ Shell/CMakeFiles/shell.dir/shell.cpp.o: Shell/shell.cpp \
   /usr/include/bits/types/wint_t.h \
   /usr/include/bits/typesizes.h \
   /usr/include/bits/uintn-identity.h \
+  /usr/include/bits/unistd_ext.h \
   /usr/include/bits/waitflags.h \
   /usr/include/bits/waitstatus.h \
   /usr/include/bits/wchar.h \
@@ -190,6 +196,7 @@ Shell/CMakeFiles/shell.dir/shell.cpp.o: Shell/shell.cpp \
   /usr/include/features.h \
   /usr/include/gnu/stubs-64.h \
   /usr/include/gnu/stubs.h \
+  /usr/include/linux/close_range.h \
   /usr/include/linux/errno.h \
   /usr/include/linux/posix_types.h \
   /usr/include/linux/sched/types.h \
@@ -206,13 +213,14 @@ Shell/CMakeFiles/shell.dir/shell.cpp.o: Shell/shell.cpp \
   /usr/include/sys/single_threaded.h \
   /usr/include/sys/types.h \
   /usr/include/time.h \
+  /usr/include/unistd.h \
   /usr/include/wchar.h \
   /usr/include/wctype.h \
   /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/include/stdarg.h \
   /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/include/stddef.h
 
 
-/usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/include/stdarg.h:
+/usr/include/unistd.h:
 
 /usr/include/sys/single_threaded.h:
 
@@ -308,19 +316,13 @@ Shell/CMakeFiles/shell.dir/shell.cpp.o: Shell/shell.cpp \
 
 /usr/include/c++/15.2.1/bits/streambuf_iterator.h:
 
-/usr/include/bits/types/struct_FILE.h:
-
-/usr/include/asm/types.h:
+/usr/include/c++/15.2.1/bits/stl_iterator_base_types.h:
 
 /usr/include/c++/15.2.1/tuple:
 
 /usr/include/bits/types/clockid_t.h:
 
-/usr/include/bits/atomic_wide_counter.h:
-
 /usr/include/c++/15.2.1/bits/basic_string.h:
-
-/usr/include/c++/15.2.1/bits/stl_iterator.h:
 
 /usr/include/c++/15.2.1/x86_64-pc-linux-gnu/bits/cpu_defines.h:
 
@@ -332,29 +334,21 @@ Shell/CMakeFiles/shell.dir/shell.cpp.o: Shell/shell.cpp \
 
 /usr/include/bits/types.h:
 
-/usr/include/bits/stdint-intn.h:
-
-/usr/include/asm/errno.h:
-
-/usr/include/c++/15.2.1/type_traits:
-
-/usr/include/c++/15.2.1/debug/debug.h:
-
-/usr/include/bits/thread-shared-types.h:
+/usr/include/bits/getopt_core.h:
 
 /usr/include/c++/15.2.1/x86_64-pc-linux-gnu/bits/c++allocator.h:
 
 /usr/include/bits/types/time_t.h:
-
-/usr/include/bits/types/sigset_t.h:
-
-/usr/include/c++/15.2.1/bits/locale_classes.h:
 
 /usr/include/bits/types/struct_timeval.h:
 
 /usr/include/c++/15.2.1/system_error:
 
 /usr/include/c++/15.2.1/bits/new_allocator.h:
+
+/usr/include/linux/close_range.h:
+
+/usr/include/bits/stdint-intn.h:
 
 /usr/include/bits/setjmp.h:
 
@@ -363,6 +357,16 @@ Shell/CMakeFiles/shell.dir/shell.cpp.o: Shell/shell.cpp \
 /usr/include/bits/types/__fpos64_t.h:
 
 /usr/include/bits/select.h:
+
+/usr/include/gnu/stubs.h:
+
+/usr/include/bits/pthreadtypes-arch.h:
+
+/usr/include/asm/errno.h:
+
+/usr/include/bits/atomic_wide_counter.h:
+
+/usr/include/bits/posix_opt.h:
 
 /usr/include/asm/posix_types.h:
 
@@ -380,6 +384,10 @@ Shell/CMakeFiles/shell.dir/shell.cpp.o: Shell/shell.cpp \
 
 /usr/include/bits/types/cookie_io_functions_t.h:
 
+/usr/include/c++/15.2.1/bits/stl_algobase.h:
+
+/usr/include/bits/sched.h:
+
 /usr/include/c++/15.2.1/bits/functional_hash.h:
 
 /usr/include/stdc-predef.h:
@@ -389,8 +397,6 @@ Shell/CMakeFiles/shell.dir/shell.cpp.o: Shell/shell.cpp \
 /usr/include/asm-generic/posix_types.h:
 
 /usr/include/bits/types/__sigset_t.h:
-
-/usr/include/c++/15.2.1/bits/stl_iterator_base_types.h:
 
 /usr/include/asm-generic/errno.h:
 
@@ -406,13 +412,15 @@ Shell/CMakeFiles/shell.dir/shell.cpp.o: Shell/shell.cpp \
 
 /usr/include/c++/15.2.1/bits/basic_ios.h:
 
-/usr/include/bits/struct_rwlock.h:
+Shell/shell.hpp:
 
-/usr/include/bits/types/struct_itimerspec.h:
+/usr/include/c++/15.2.1/cerrno:
 
-/usr/include/c++/15.2.1/streambuf:
+/usr/include/c++/15.2.1/bits/basic_ios.tcc:
 
-/usr/include/c++/15.2.1/bits/functexcept.h:
+/usr/include/asm/types.h:
+
+/usr/include/bits/types/struct_FILE.h:
 
 /usr/include/bits/types/locale_t.h:
 
@@ -432,6 +440,8 @@ Shell/CMakeFiles/shell.dir/shell.cpp.o: Shell/shell.cpp \
 
 /usr/include/c++/15.2.1/bits/max_size_type.h:
 
+/usr/include/bits/confname.h:
+
 /usr/include/bits/struct_mutex.h:
 
 /usr/include/c++/15.2.1/numbers:
@@ -439,6 +449,12 @@ Shell/CMakeFiles/shell.dir/shell.cpp.o: Shell/shell.cpp \
 /usr/include/bits/typesizes.h:
 
 /usr/include/bits/long-double.h:
+
+/usr/include/c++/15.2.1/bits/stl_construct.h:
+
+/usr/include/bits/cpu-set.h:
+
+/usr/include/c++/15.2.1/bits/cpp_type_traits.h:
 
 /usr/include/features.h:
 
@@ -452,6 +468,10 @@ Shell/CMakeFiles/shell.dir/shell.cpp.o: Shell/shell.cpp \
 
 /usr/include/c++/15.2.1/bits/basic_string.tcc:
 
+/usr/include/c++/15.2.1/bits/stl_iterator.h:
+
+/usr/include/bits/environments.h:
+
 /usr/include/bits/locale.h:
 
 /usr/include/wctype.h:
@@ -460,13 +480,15 @@ Shell/CMakeFiles/shell.dir/shell.cpp.o: Shell/shell.cpp \
 
 /usr/include/bits/errno.h:
 
-/usr/include/bits/types/mbstate_t.h:
+/usr/include/c++/15.2.1/type_traits:
 
-/usr/include/c++/15.2.1/pstl/pstl_config.h:
+/usr/include/c++/15.2.1/debug/debug.h:
 
-/usr/include/bits/pthread_stack_min-dynamic.h:
+/usr/include/bits/thread-shared-types.h:
 
-/usr/include/c++/15.2.1/bits/ranges_util.h:
+/usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/include/stdarg.h:
+
+/usr/include/bits/getopt_posix.h:
 
 /usr/include/bits/floatn-common.h:
 
@@ -476,15 +498,25 @@ Shell/shell.cpp:
 
 /usr/include/bits/libc-header-start.h:
 
-/usr/include/gnu/stubs.h:
+/usr/include/bits/types/mbstate_t.h:
 
-/usr/include/bits/pthreadtypes-arch.h:
+/usr/include/c++/15.2.1/pstl/pstl_config.h:
 
-Shell/shell.hpp:
+/usr/include/bits/pthread_stack_min-dynamic.h:
 
-/usr/include/c++/15.2.1/cerrno:
+/usr/include/c++/15.2.1/bits/ranges_util.h:
 
-/usr/include/c++/15.2.1/bits/basic_ios.tcc:
+/usr/include/bits/types/sigset_t.h:
+
+/usr/include/c++/15.2.1/bits/locale_classes.h:
+
+/usr/include/bits/struct_rwlock.h:
+
+/usr/include/bits/types/struct_itimerspec.h:
+
+/usr/include/c++/15.2.1/streambuf:
+
+/usr/include/c++/15.2.1/bits/functexcept.h:
 
 /usr/include/bits/types/struct_sched_param.h:
 
@@ -515,6 +547,8 @@ Shell/shell.hpp:
 /usr/include/c++/15.2.1/bits/stl_iterator_base_funcs.h:
 
 /usr/include/c++/15.2.1/bits/ios_base.h:
+
+/usr/include/bits/unistd_ext.h:
 
 /usr/include/bits/timesize.h:
 
@@ -550,12 +584,6 @@ Shell/shell.hpp:
 
 /usr/include/c++/15.2.1/bits/cxxabi_init_exception.h:
 
-/usr/include/bits/cpu-set.h:
-
-/usr/include/c++/15.2.1/bits/cpp_type_traits.h:
-
-/usr/include/c++/15.2.1/bits/stl_construct.h:
-
 /usr/include/bits/wordsize.h:
 
 /usr/include/c++/15.2.1/bits/exception.h:
@@ -563,6 +591,14 @@ Shell/shell.hpp:
 /usr/include/bits/pthreadtypes.h:
 
 /usr/include/c++/15.2.1/bits/exception_ptr.h:
+
+/usr/include/c++/15.2.1/ios:
+
+/usr/include/c++/15.2.1/bits/stl_function.h:
+
+/usr/include/bits/endian.h:
+
+/usr/include/c++/15.2.1/bits/invoke.h:
 
 /usr/include/c++/15.2.1/cstdio:
 
@@ -617,15 +653,3 @@ Shell/shell.hpp:
 /usr/include/gnu/stubs-64.h:
 
 /usr/include/c++/15.2.1/bits/std_abs.h:
-
-/usr/include/bits/sched.h:
-
-/usr/include/c++/15.2.1/bits/stl_algobase.h:
-
-/usr/include/c++/15.2.1/ios:
-
-/usr/include/bits/endian.h:
-
-/usr/include/c++/15.2.1/bits/invoke.h:
-
-/usr/include/c++/15.2.1/bits/stl_function.h:
