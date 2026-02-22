@@ -64,20 +64,24 @@ CMAKE_BINARY_DIR = /mnt/c/users/dell/mash
 
 # The main recursive "all" target.
 all: CMakeFiles/mash.dir/all
+all: lexer/all
 all: Shell/all
 .PHONY : all
 
 # The main recursive "codegen" target.
 codegen: CMakeFiles/mash.dir/codegen
+codegen: lexer/codegen
 codegen: Shell/codegen
 .PHONY : codegen
 
 # The main recursive "preinstall" target.
+preinstall: lexer/preinstall
 preinstall: Shell/preinstall
 .PHONY : preinstall
 
 # The main recursive "clean" target.
 clean: CMakeFiles/mash.dir/clean
+clean: lexer/clean
 clean: Shell/clean
 .PHONY : clean
 
@@ -101,18 +105,38 @@ Shell/clean: Shell/CMakeFiles/shell.dir/clean
 .PHONY : Shell/clean
 
 #=============================================================================
+# Directory level rules for directory lexer
+
+# Recursive "all" directory target.
+lexer/all: lexer/CMakeFiles/lexer.dir/all
+.PHONY : lexer/all
+
+# Recursive "codegen" directory target.
+lexer/codegen: lexer/CMakeFiles/lexer.dir/codegen
+.PHONY : lexer/codegen
+
+# Recursive "preinstall" directory target.
+lexer/preinstall:
+.PHONY : lexer/preinstall
+
+# Recursive "clean" directory target.
+lexer/clean: lexer/CMakeFiles/lexer.dir/clean
+.PHONY : lexer/clean
+
+#=============================================================================
 # Target rules for target CMakeFiles/mash.dir
 
 # All Build rule for target.
+CMakeFiles/mash.dir/all: lexer/CMakeFiles/lexer.dir/all
 CMakeFiles/mash.dir/all: Shell/CMakeFiles/shell.dir/all
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/mash.dir/build.make CMakeFiles/mash.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/mash.dir/build.make CMakeFiles/mash.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/mnt/c/users/dell/mash/CMakeFiles --progress-num=1,2 "Built target mash"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/mnt/c/users/dell/mash/CMakeFiles --progress-num=3,4 "Built target mash"
 .PHONY : CMakeFiles/mash.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/mash.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/c/users/dell/mash/CMakeFiles 4
+	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/c/users/dell/mash/CMakeFiles 6
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/mash.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/c/users/dell/mash/CMakeFiles 0
 .PHONY : CMakeFiles/mash.dir/rule
@@ -124,7 +148,7 @@ mash: CMakeFiles/mash.dir/rule
 # codegen rule for target.
 CMakeFiles/mash.dir/codegen:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/mash.dir/build.make CMakeFiles/mash.dir/codegen
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/mnt/c/users/dell/mash/CMakeFiles --progress-num=1,2 "Finished codegen for target mash"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/mnt/c/users/dell/mash/CMakeFiles --progress-num=3,4 "Finished codegen for target mash"
 .PHONY : CMakeFiles/mash.dir/codegen
 
 # clean rule for target.
@@ -133,18 +157,50 @@ CMakeFiles/mash.dir/clean:
 .PHONY : CMakeFiles/mash.dir/clean
 
 #=============================================================================
+# Target rules for target lexer/CMakeFiles/lexer.dir
+
+# All Build rule for target.
+lexer/CMakeFiles/lexer.dir/all:
+	$(MAKE) $(MAKESILENT) -f lexer/CMakeFiles/lexer.dir/build.make lexer/CMakeFiles/lexer.dir/depend
+	$(MAKE) $(MAKESILENT) -f lexer/CMakeFiles/lexer.dir/build.make lexer/CMakeFiles/lexer.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/mnt/c/users/dell/mash/CMakeFiles --progress-num=1,2 "Built target lexer"
+.PHONY : lexer/CMakeFiles/lexer.dir/all
+
+# Build rule for subdir invocation for target.
+lexer/CMakeFiles/lexer.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/c/users/dell/mash/CMakeFiles 2
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 lexer/CMakeFiles/lexer.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/c/users/dell/mash/CMakeFiles 0
+.PHONY : lexer/CMakeFiles/lexer.dir/rule
+
+# Convenience name for target.
+lexer: lexer/CMakeFiles/lexer.dir/rule
+.PHONY : lexer
+
+# codegen rule for target.
+lexer/CMakeFiles/lexer.dir/codegen:
+	$(MAKE) $(MAKESILENT) -f lexer/CMakeFiles/lexer.dir/build.make lexer/CMakeFiles/lexer.dir/codegen
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/mnt/c/users/dell/mash/CMakeFiles --progress-num=1,2 "Finished codegen for target lexer"
+.PHONY : lexer/CMakeFiles/lexer.dir/codegen
+
+# clean rule for target.
+lexer/CMakeFiles/lexer.dir/clean:
+	$(MAKE) $(MAKESILENT) -f lexer/CMakeFiles/lexer.dir/build.make lexer/CMakeFiles/lexer.dir/clean
+.PHONY : lexer/CMakeFiles/lexer.dir/clean
+
+#=============================================================================
 # Target rules for target Shell/CMakeFiles/shell.dir
 
 # All Build rule for target.
-Shell/CMakeFiles/shell.dir/all:
+Shell/CMakeFiles/shell.dir/all: lexer/CMakeFiles/lexer.dir/all
 	$(MAKE) $(MAKESILENT) -f Shell/CMakeFiles/shell.dir/build.make Shell/CMakeFiles/shell.dir/depend
 	$(MAKE) $(MAKESILENT) -f Shell/CMakeFiles/shell.dir/build.make Shell/CMakeFiles/shell.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/mnt/c/users/dell/mash/CMakeFiles --progress-num=3,4 "Built target shell"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/mnt/c/users/dell/mash/CMakeFiles --progress-num=5,6 "Built target shell"
 .PHONY : Shell/CMakeFiles/shell.dir/all
 
 # Build rule for subdir invocation for target.
 Shell/CMakeFiles/shell.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/c/users/dell/mash/CMakeFiles 2
+	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/c/users/dell/mash/CMakeFiles 4
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 Shell/CMakeFiles/shell.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/c/users/dell/mash/CMakeFiles 0
 .PHONY : Shell/CMakeFiles/shell.dir/rule
@@ -156,7 +212,7 @@ shell: Shell/CMakeFiles/shell.dir/rule
 # codegen rule for target.
 Shell/CMakeFiles/shell.dir/codegen:
 	$(MAKE) $(MAKESILENT) -f Shell/CMakeFiles/shell.dir/build.make Shell/CMakeFiles/shell.dir/codegen
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/mnt/c/users/dell/mash/CMakeFiles --progress-num=3,4 "Finished codegen for target shell"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/mnt/c/users/dell/mash/CMakeFiles --progress-num=5,6 "Finished codegen for target shell"
 .PHONY : Shell/CMakeFiles/shell.dir/codegen
 
 # clean rule for target.

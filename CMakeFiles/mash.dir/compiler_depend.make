@@ -168,7 +168,8 @@ mash: /usr/lib/Scrt1.o \
   /usr/lib/libm.so.6 \
   /usr/lib/libmvec.so.1 \
   CMakeFiles/mash.dir/main.cpp.o \
-  Shell/libshell.a
+  Shell/libshell.a \
+  lexer/liblexer.a
 
 
 Shell/libshell.a:
@@ -414,6 +415,8 @@ main.cpp:
 /usr/include/c++/15.2.1/bits/refwrap.h:
 
 /usr/include/c++/15.2.1/ext/type_traits.h:
+
+lexer/liblexer.a:
 
 /usr/include/c++/15.2.1/bits/range_access.h:
 

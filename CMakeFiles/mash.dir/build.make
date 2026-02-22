@@ -96,7 +96,9 @@ mash_EXTERNAL_OBJECTS =
 mash: CMakeFiles/mash.dir/main.cpp.o
 mash: CMakeFiles/mash.dir/build.make
 mash: CMakeFiles/mash.dir/compiler_depend.ts
+mash: lexer/liblexer.a
 mash: Shell/libshell.a
+mash: lexer/liblexer.a
 mash: CMakeFiles/mash.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/mnt/c/users/dell/mash/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable mash"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/mash.dir/link.txt --verbose=$(VERBOSE)

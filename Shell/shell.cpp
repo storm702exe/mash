@@ -3,6 +3,7 @@
 #include <cstdlib>
 #include <string>
 #include <unistd.h>
+#include <lexer.hpp>
 std::string home = std::getenv("HOME");
 std::string user = std::getenv("USER");
 std::string PWD = std::getenv("PWD");
@@ -12,9 +13,9 @@ Shell::Shell(/* args */)
     
     
     std::string command;
-    char buffer[256];
-    gethostname(buffer, sizeof(buffer));
-    std::string host(buffer);
+    char host_buffer[256];
+    gethostname(host_buffer, sizeof(host_buffer));
+    std::string host(host_buffer);
     
 
     
@@ -31,8 +32,10 @@ Shell::Shell(/* args */)
             std::cout << " " << PWD << "]$ ";
             
         }
+
         std::cin >> command;
-        
+        lexer lexar;
+        lexar.lex(command);
         
     }
     

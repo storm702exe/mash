@@ -222,6 +222,15 @@ CMAKE_TAPI:FILEPATH=CMAKE_TAPI-NOTFOUND
 CMAKE_VERBOSE_MAKEFILE:BOOL=FALSE
 
 //Value Computed by CMake
+lexer_BINARY_DIR:STATIC=/mnt/c/users/dell/mash/lexer
+
+//Value Computed by CMake
+lexer_IS_TOP_LEVEL:STATIC=OFF
+
+//Value Computed by CMake
+lexer_SOURCE_DIR:STATIC=/mnt/c/users/dell/mash/lexer
+
+//Value Computed by CMake
 mash_BINARY_DIR:STATIC=/mnt/c/users/dell/mash
 
 //Value Computed by CMake
@@ -235,6 +244,9 @@ shell_BINARY_DIR:STATIC=/mnt/c/users/dell/mash/Shell
 
 //Value Computed by CMake
 shell_IS_TOP_LEVEL:STATIC=OFF
+
+//Dependencies for the target
+shell_LIB_DEPENDS:STATIC=general;lexer;
 
 //Value Computed by CMake
 shell_SOURCE_DIR:STATIC=/mnt/c/users/dell/mash/Shell
@@ -348,7 +360,7 @@ CMAKE_MODULE_LINKER_FLAGS_RELWITHDEBINFO-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_NM
 CMAKE_NM-ADVANCED:INTERNAL=1
 //number of local generators
-CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=2
+CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=3
 //ADVANCED property for variable: CMAKE_OBJCOPY
 CMAKE_OBJCOPY-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_OBJDUMP

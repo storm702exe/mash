@@ -1,1 +1,1 @@
-/usr/bin/g++ -Wl,--dependency-file=CMakeFiles/mash.dir/link.d CMakeFiles/mash.dir/main.cpp.o -o mash  Shell/libshell.a
+/usr/bin/g++ -Wl,--dependency-file=CMakeFiles/mash.dir/link.d CMakeFiles/mash.dir/main.cpp.o -o mash  lexer/liblexer.a Shell/libshell.a lexer/liblexer.a

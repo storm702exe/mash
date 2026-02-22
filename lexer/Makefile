@@ -87,14 +87,14 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/c/users/dell/mash/CMakeFiles /mnt/c/users/dell/mash//CMakeFiles/progress.marks
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 all
+	cd /mnt/c/users/dell/mash && $(CMAKE_COMMAND) -E cmake_progress_start /mnt/c/users/dell/mash/CMakeFiles /mnt/c/users/dell/mash/lexer//CMakeFiles/progress.marks
+	cd /mnt/c/users/dell/mash && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 lexer/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/c/users/dell/mash/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 clean
+	cd /mnt/c/users/dell/mash && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 lexer/clean
 .PHONY : clean
 
 # The main clean target
@@ -103,81 +103,56 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 preinstall
+	cd /mnt/c/users/dell/mash && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 lexer/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 preinstall
+	cd /mnt/c/users/dell/mash && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 lexer/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	$(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /mnt/c/users/dell/mash && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
-#=============================================================================
-# Target rules for targets named mash
+# Convenience name for target.
+lexer/CMakeFiles/lexer.dir/rule:
+	cd /mnt/c/users/dell/mash && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 lexer/CMakeFiles/lexer.dir/rule
+.PHONY : lexer/CMakeFiles/lexer.dir/rule
 
-# Build rule for target.
-mash: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 mash
-.PHONY : mash
-
-# fast build rule for target.
-mash/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/mash.dir/build.make CMakeFiles/mash.dir/build
-.PHONY : mash/fast
-
-#=============================================================================
-# Target rules for targets named lexer
-
-# Build rule for target.
-lexer: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 lexer
+# Convenience name for target.
+lexer: lexer/CMakeFiles/lexer.dir/rule
 .PHONY : lexer
 
 # fast build rule for target.
 lexer/fast:
-	$(MAKE) $(MAKESILENT) -f lexer/CMakeFiles/lexer.dir/build.make lexer/CMakeFiles/lexer.dir/build
+	cd /mnt/c/users/dell/mash && $(MAKE) $(MAKESILENT) -f lexer/CMakeFiles/lexer.dir/build.make lexer/CMakeFiles/lexer.dir/build
 .PHONY : lexer/fast
 
-#=============================================================================
-# Target rules for targets named shell
-
-# Build rule for target.
-shell: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 shell
-.PHONY : shell
-
-# fast build rule for target.
-shell/fast:
-	$(MAKE) $(MAKESILENT) -f Shell/CMakeFiles/shell.dir/build.make Shell/CMakeFiles/shell.dir/build
-.PHONY : shell/fast
-
-main.o: main.cpp.o
-.PHONY : main.o
+lexer.o: lexer.cpp.o
+.PHONY : lexer.o
 
 # target to build an object file
-main.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/mash.dir/build.make CMakeFiles/mash.dir/main.cpp.o
-.PHONY : main.cpp.o
+lexer.cpp.o:
+	cd /mnt/c/users/dell/mash && $(MAKE) $(MAKESILENT) -f lexer/CMakeFiles/lexer.dir/build.make lexer/CMakeFiles/lexer.dir/lexer.cpp.o
+.PHONY : lexer.cpp.o
 
-main.i: main.cpp.i
-.PHONY : main.i
+lexer.i: lexer.cpp.i
+.PHONY : lexer.i
 
 # target to preprocess a source file
-main.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/mash.dir/build.make CMakeFiles/mash.dir/main.cpp.i
-.PHONY : main.cpp.i
+lexer.cpp.i:
+	cd /mnt/c/users/dell/mash && $(MAKE) $(MAKESILENT) -f lexer/CMakeFiles/lexer.dir/build.make lexer/CMakeFiles/lexer.dir/lexer.cpp.i
+.PHONY : lexer.cpp.i
 
-main.s: main.cpp.s
-.PHONY : main.s
+lexer.s: lexer.cpp.s
+.PHONY : lexer.s
 
 # target to generate assembly for a file
-main.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/mash.dir/build.make CMakeFiles/mash.dir/main.cpp.s
-.PHONY : main.cpp.s
+lexer.cpp.s:
+	cd /mnt/c/users/dell/mash && $(MAKE) $(MAKESILENT) -f lexer/CMakeFiles/lexer.dir/build.make lexer/CMakeFiles/lexer.dir/lexer.cpp.s
+.PHONY : lexer.cpp.s
 
 # Help Target
 help:
@@ -188,11 +163,9 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... lexer"
-	@echo "... mash"
-	@echo "... shell"
-	@echo "... main.o"
-	@echo "... main.i"
-	@echo "... main.s"
+	@echo "... lexer.o"
+	@echo "... lexer.i"
+	@echo "... lexer.s"
 .PHONY : help
 
 
@@ -204,6 +177,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	$(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /mnt/c/users/dell/mash && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

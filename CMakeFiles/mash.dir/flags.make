@@ -4,7 +4,7 @@
 # compile CXX with /usr/bin/g++
 CXX_DEFINES = 
 
-CXX_INCLUDES = -I/mnt/c/users/dell/mash/builtins/cd -I/mnt/c/users/dell/mash/excuter -I/mnt/c/users/dell/mash/parser -I/mnt/c/users/dell/mash/lexer -I/mnt/c/users/dell/mash/Shell
+CXX_INCLUDES = -I/mnt/c/users/dell/mash/builtins/cd -I/mnt/c/users/dell/mash/excuter -I/mnt/c/users/dell/mash/parser -I/mnt/c/users/dell/mash/lexer -I/mnt/c/users/dell/mash/Shell -I/mnt/c/users/dell/mash/Shell/../lexer
 
 CXX_FLAGS = -std=gnu++20
 

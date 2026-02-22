@@ -3,7 +3,9 @@ mash: \
   /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/../../../../lib/crti.o \
   /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/crtbeginS.o \
   CMakeFiles/mash.dir/main.cpp.o \
+  lexer/liblexer.a \
   Shell/libshell.a \
+  lexer/liblexer.a \
   /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/../../../../lib/libstdc++.so \
   /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/../../../../lib/libm.so \
   /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/../../../../lib/libm.so \
@@ -40,7 +42,11 @@ mash: \
 
 CMakeFiles/mash.dir/main.cpp.o:
 
+lexer/liblexer.a:
+
 Shell/libshell.a:
+
+lexer/liblexer.a:
 
 /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/../../../../lib/libstdc++.so:
 
