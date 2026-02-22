@@ -1,9 +1,0 @@
-/mnt/c/users/dell/mash/CMakeFiles/mash.dir
-/mnt/c/users/dell/mash/CMakeFiles/edit_cache.dir
-/mnt/c/users/dell/mash/CMakeFiles/rebuild_cache.dir
-/mnt/c/users/dell/mash/lexer/CMakeFiles/lexer.dir
-/mnt/c/users/dell/mash/lexer/CMakeFiles/edit_cache.dir
-/mnt/c/users/dell/mash/lexer/CMakeFiles/rebuild_cache.dir
-/mnt/c/users/dell/mash/Shell/CMakeFiles/shell.dir
-/mnt/c/users/dell/mash/Shell/CMakeFiles/edit_cache.dir
-/mnt/c/users/dell/mash/Shell/CMakeFiles/rebuild_cache.dir
